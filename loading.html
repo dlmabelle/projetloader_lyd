@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page Loader</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+    }
+   /* .loader {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  margin:15px auto;
+  position: relative;
+  color: #FFF;
+  box-sizing: border-box;
+  animation: animloader 2s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+  }
+  25% {
+    box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 2px;
+  }
+  50% {
+    box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 2px,  -38px 0 0 -2px;
+  }
+  75% {
+    box-shadow: 14px 0 0 2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+  }
+  100% {
+    box-shadow: 14px 0 0 -2px,  38px 0 0 2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+  }
+}*/
+    .loader{
+        border: 14px solid rgb(211, 211, 211);
+  position: absolute;
+  border-radius: 50%;
+  animation: spin 2s linear infinite ;
+  border-bottom: 14px solid #f4f5f8;
+  
+  width: 50px;
+  height: 50px;
+  
+ 
+    }
+    @keyframes spin {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    /*@-webkit-keyframes spin {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }*/
+    .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+        display: flex;
+        background-color: #99999999;
+        align-items: center;
+        justify-content: center; 
+    }
+    .preloader .loader{
+        display: block;
+        position: relative;
+    } 
+  
+</style>
+<body>
+    <div class="preloader">
+        <h1>Please wait..</h1>
+        <span class="loader"> </span>
+    </div>
+    <header>
+        <h1> test</h1>
+    </header>
+    <section>
+        <div class="container">
+            <P>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+                unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</P>
+            <p>with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Why do we use it?</p>
+            <p>
+                It is a long established fact that a reader will be distracted by
+ the readable content of a page when looking at its layout. The point of using
+            </p>
+            <p>
+
+                Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default 
+                model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)
+            </p>
+        </div>
+    </section>
+    <script>
+        setTimeout(() => {
+            document.querySelector('.preloader').style.display ='none'
+        },4000);
+       
+    </script>
+   
+</body>
+</html>
